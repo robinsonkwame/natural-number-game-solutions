@@ -1,8 +1,8 @@
-cases b with k,
+cases b with d, /- similar to induction -/
 refl,
-
-rw add_succ a k at H,
+rw add_succ at H, /- remember that != is defn equi to A = B --> false -/
 exfalso,
-have h₁ := succ_ne_zero (a + k),
-have h₂ := h₁(H),
-exact h₂,
+/- i feel like there's a way to use succ_ne_zero to directly say that H is false, tho -/
+/- like succ_ne_zero(H) over (a+d) or something, if that makes sense -/
+have NE := succ_ne_zero (a + d),
+exact NE(H), 
