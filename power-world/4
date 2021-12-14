@@ -1,8 +1,6 @@
 induction m with k h,
-rw pow_zero 1,
-refl,
+apply pow_zero,
 
 rw pow_succ 1 k,
 rw mul_one (1 ^ k),
-rw h,
-refl,
+exact h,
