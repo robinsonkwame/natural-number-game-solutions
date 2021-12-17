@@ -14,7 +14,7 @@ repeat {rw pow_zero},
 repeat {rw one_mul},
 rw add_mul a a b,
 
-/- factor a and b's out -/
+/- expand a and b's out -/
 repeat {rw add_mul},
 repeat {rw mul_add},
 
