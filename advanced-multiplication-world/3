@@ -1,11 +1,10 @@
 split,
 intro h1,
 /- so `( )` introduces a precedence and isn't really a function input; so a b works but (a b) assumes a is expecting input; this resolves a long standing confusion of mine in how Lean works and how it's typing, post fix notation, etc -/
-have h2 := eq_zero_or_eq_zero_of_mul_eq_zero a b h1,
-exact h2,
+exact eq_zero_or_eq_zero_of_mul_eq_zero a b h1,
 
-intro h3,
-cases h3 with a b,
+intro h2,
+cases h2 with a b,
 rw a,
 apply zero_mul b,
 
